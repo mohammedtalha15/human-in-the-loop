@@ -131,8 +131,8 @@ export default function HomePage() {
   );
 
   return (
-    <div className="relative min-h-screen bg-[#F8F9FB] flex flex-col justify-between selection:bg-slate-900 selection:text-white">
-      <div>
+    <div className="relative min-h-screen w-full overflow-x-clip bg-[#F8F9FB] flex flex-col justify-between selection:bg-slate-900 selection:text-white">
+      <div className="w-full">
         {/* Floating Navbar */}
         <Navbar
           onStartAgent={() => handleStartAgent()}

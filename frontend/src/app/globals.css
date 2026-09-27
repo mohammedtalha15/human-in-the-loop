@@ -6,11 +6,17 @@
   --font-mono: "JetBrains Mono", monospace;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background-color: #f7f9fb;
   color: #1a202c;
-  overflow-x: hidden;
+  overflow-x: clip;
+  min-height: 100vh;
 }
 
 .font-serif-display {
@@ -20,8 +26,8 @@ body {
 /* Ambient glow gradient behind hero and main sections like Sarvam.ai */
 .ambient-halo {
   position: absolute;
-  width: 900px;
-  height: 900px;
+  width: min(900px, 92vw);
+  height: min(900px, 92vw);
   border-radius: 50%;
   background: radial-gradient(circle, rgba(164, 186, 226, 0.35) 0%, rgba(220, 230, 248, 0.15) 50%, rgba(247, 249, 251, 0) 70%);
   filter: blur(80px);
@@ -118,4 +124,13 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

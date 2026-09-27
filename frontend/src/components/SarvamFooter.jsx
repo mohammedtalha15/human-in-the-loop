@@ -4,9 +4,9 @@ import React from "react";
 
 export default function SarvamFooter() {
   return (
-    <footer className="bg-white border-t border-slate-200/80 pt-16 pb-12 px-4 sm:px-6 lg:px-8 mt-12">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-16">
+    <footer className="bg-white border-t border-slate-200/80 pt-12 sm:pt-16 pb-12 px-4 sm:px-6 lg:px-8 mt-12 overflow-hidden">
+      <div className="max-w-6xl mx-auto min-w-0">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8 mb-12 sm:mb-16 min-w-0">
           {/* Logo Column */}
           <div className="col-span-2 sm:col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">

@@ -4,13 +4,22 @@
   "private": true,
   "description": "Haul Spire — Full-stack Human-in-the-Loop (HITL) Product Curation Platform",
   "scripts": {
-    "dev": "npm --prefix frontend run dev -- -p 3000",
+    "dev": "concurrently -n \"backend,frontend\" -c \"cyan.bold,green.bold\" \"npm run dev:backend\" \"npm run dev:frontend\"",
     "dev:frontend": "npm --prefix frontend run dev -- -p 3000",
     "dev:backend": "cd backend && source .venv/bin/activate && python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload",
     "build": "npm --prefix frontend run build",
-    "start": "npm --prefix frontend run start -- -p 3000"
+    "start": "concurrently -n \"backend,frontend\" -c \"cyan.bold,green.bold\" \"npm run dev:backend\" \"npm --prefix frontend run start -- -p 3000\""
   },
-  "keywords": ["human-in-the-loop", "langgraph", "fastapi", "nextjs", "sarvam-ai"],
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "human-in-the-loop",
+    "langgraph",
+    "fastapi",
+    "nextjs",
+    "sarvam-ai"
+  ],
   "author": "Mohammed Talha",
   "license": "MIT"
 }

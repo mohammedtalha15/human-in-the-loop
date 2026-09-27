@@ -6,7 +6,7 @@ import { Sparkles, ArrowRight, ShieldCheck, Cpu } from "lucide-react";
 
 export default function HeroSection({ onStartAgent, isRunning }) {
   return (
-    <section className="relative px-4 sm:px-6 lg:px-8 pt-2 pb-12">
+    <section className="relative px-4 sm:px-6 lg:px-8 pt-2 pb-12 overflow-hidden">
       {/* Ambient background glow halo */}
       <div className="ambient-halo top-[-100px] left-1/2 -translate-x-1/2" />
 
@@ -93,7 +93,7 @@ export default function HeroSection({ onStartAgent, isRunning }) {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-serif-display text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-normal tracking-tight text-white leading-[1.12] max-w-4xl mb-6"
+            className="font-serif-display text-3xl sm:text-5xl md:text-6xl lg:text-[68px] font-normal tracking-tight text-white leading-[1.14] max-w-4xl mb-6 break-words"
           >
             Curate the Future of E-Commerce with Haul Spire
           </motion.h1>
@@ -103,7 +103,7 @@ export default function HeroSection({ onStartAgent, isRunning }) {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-lg text-slate-200/90 font-sans max-w-2xl font-light leading-relaxed mb-10"
+            className="text-sm sm:text-base md:text-lg text-slate-200/90 font-sans max-w-2xl font-light leading-relaxed mb-10 px-2"
           >
             Autonomous AI product discovery, dynamic pricing analytics, and high-margin supplier verification — supervised by human intelligence.
           </motion.p>
@@ -132,16 +132,16 @@ export default function HeroSection({ onStartAgent, isRunning }) {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="relative z-10 flex flex-col sm:flex-row items-center gap-3.5"
+            className="relative z-10 flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto px-4"
           >
             <button
               onClick={onStartAgent}
               disabled={isRunning}
-              className="sarvam-btn-glass px-8 py-3.5 text-sm sm:text-base font-medium flex items-center gap-2.5 cursor-pointer disabled:opacity-60"
+              className="sarvam-btn-glass w-full sm:w-auto px-6 sm:px-8 py-3.5 text-xs sm:text-sm md:text-base font-medium flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 whitespace-nowrap"
             >
-              <Sparkles className="w-4 h-4 text-white" />
+              <Sparkles className="w-4 h-4 text-white shrink-0" />
               <span>{isRunning ? "Agent Running Research…" : "Start Agent Discovery"}</span>
-              <ArrowRight className="w-4 h-4 text-white/80" />
+              <ArrowRight className="w-4 h-4 text-white/80 shrink-0" />
             </button>
             <a
               href="#studio"
